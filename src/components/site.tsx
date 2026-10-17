@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { motion, useScroll, useSpring, useReducedMotion } from "motion/react";
 import { useState, type ReactNode } from "react";
 import { Menu, X } from "lucide-react";
-import cover from "@/assets/cover-front.jpg.asset.json";
 import { Button } from "@/components/ui/button";
 import { SITE } from "@/lib/content";
 
@@ -101,7 +100,7 @@ export function BookCover({ className = "" }: { className?: string }) {
       <div className="gold-glow absolute -inset-16 -z-10 opacity-70" />
       <div className="relative aspect-[1366/2082] [perspective:1400px]">
         <div className="relative h-full w-full shadow-book transition-transform duration-700 [transform:rotateY(-14deg)] hover:[transform:rotateY(-4deg)]">
-          <img src={cover.url} alt="The Art of Locking In by Andrew Rusch — book cover" className="h-full w-full object-cover" width={1366} height={2082} />
+          <img src="/cover-front.jpg" alt="The Art of Locking In by Andrew Rusch — book cover" className="h-full w-full object-cover" width={1366} height={2082} />
           <div className="absolute inset-y-0 left-0 w-3 bg-gradient-to-r from-background/70 to-transparent" />
         </div>
       </div>
