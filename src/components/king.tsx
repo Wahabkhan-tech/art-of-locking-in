@@ -9,7 +9,7 @@ export function TravellingKing() {
   const p = useSpring(scrollYProgress, { stiffness: 50, damping: 22 });
   // Deliberate stops: hero (right), attention (center, faint), comfort (left), execution (right), mission (center).
   const stops = [0, 0.18, 0.4, 0.62, 0.85, 1];
-  const x = useTransform(p, stops, ["22vw", "0vw", "-30vw", "30vw", "0vw", "0vw"]);
+  const x = useTransform(p, stops, ["3vw", "0vw", "-30vw", "30vw", "0vw", "0vw"]);
   const opacity = useTransform(p, stops, [1, 0.35, 0.5, 0.45, 1, 1]);
   const scale = useTransform(p, stops, [1, 0.85, 0.8, 0.8, 1.05, 1.05]);
   const mx = useMotionValue(0);
@@ -24,7 +24,7 @@ export function TravellingKing() {
 
   return (
     <div aria-hidden className="pointer-events-none fixed inset-0 z-0 hidden items-end justify-center overflow-hidden lg:flex">
-      <motion.div style={reduce ? { x: "22vw" } : { x, opacity, scale }} className="relative mb-[4vh] h-[78vh]">
+      <motion.div style={reduce ? { x: "3vw" } : { x, opacity, scale }} className="relative mb-[4vh] h-[78vh]">
         <div className="gold-glow absolute left-1/2 top-[20%] h-[60vh] w-[60vh] -translate-x-1/2" />
         <motion.img
           src={king}
